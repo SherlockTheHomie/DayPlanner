@@ -42,6 +42,21 @@ function isItTime() {
             timeArray[i].setAttribute("style", "background-color: grey");
         }  
     }        
-};     
+};
 
-  console.log(moment().hours());
+let scheduleStorage = [] || JSON.parse(window.localStorage.getItem("scheduleStorage"));
+
+let nineSubmit = document.getElementById("nine-am");
+
+nineSubmit.addEventListener("submit", function(event) {
+    event.preventDefault();
+    let nineInput = document.getElementById("nine-input");
+    let scheduleEvent = {
+        description: nineInput.value,
+        time: nine.time
+    }
+    localStorage.setItem('scheduleStorage', JSON.stringify(scheduleEvent));
+});
+
+
+console.log(moment().hours());
