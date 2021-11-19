@@ -5,6 +5,16 @@ setInterval(function() {
 
 isItTime();
 
+function pageLoad() {
+    if (localStorage. getItem("scheduleStorage") === null) {
+    localStorage.setItem("scheduleStorage", "");
+} else if (localStorage !== null) {
+  JSON.parse(window.localStorage.getItem("scheduleStorage"));
+ }
+ return ;
+}
+
+
 let scheduleStorage = [];
 
 let nine = document.getElementById("nine");
@@ -28,9 +38,26 @@ fifteen= 17;
 
 let schedTime;
 
-let scheduleEvent = document.this.form("");
+let scheduleEvent = document.this.form(input.value);
 
-document.forms.addEventListener("submit", storageSubmit);
+
+
+
+
+// Make object of form input value
+
+document.forms.addEventListener("submit", function(scheduleEvent) {
+    let clicked = scheduleEvent.currentTarget;
+    clicked.id = [input.value]
+});
+
+function storageSubmit() {
+    // get the dom object out of event
+    // get input value from form.
+    // add to schedule object
+    // add get item from storage to pageload
+    localStorage.setItem("schedule", JSON.stringify(scheduleEvent));
+}
 
 function storageSubmit(scheduleEvent) {
     let clicked = scheduleEvent.currentTarget;   
@@ -57,28 +84,21 @@ function isItTime() {
     }        
 };
 
-function pageLoad() {
-    if (localStorage. getItem("scheduleStorage") === null) {
-    localStorage.setItem("scheduleStorage", "");
-    // } else if (localStorage !== null) {
-    //     JSON.parse(window.localStorage.getItem("scheduleStorage"));
-    // }
-    // return ;
-}
 
 
+let faceSubmit = [input]
 
-let nineSubmit = document.getElementById("nine-am");
+// let nineSubmit = document.getElementById("nine-am");
 
-nineSubmit.addEventListener("submit", function(event) {
-    event.preventDefault();
-    let nineInput = document.getElementById("nine-input");
-    let scheduleEvent = {
-        description: nineInput.value,
-        time: nine.time
-    }   
-    localStorage.setItem(nine.time, JSON.stringify(scheduleEvent));
-});
+// nineSubmit.addEventListener("submit", function(event) {
+//     event.preventDefault();
+//     let nineInput = document.getElementById("nine-input");
+//     let scheduleEvent = {
+//         description: nineInput.value,
+//         time: nine.time
+//     }   
+
+// });
 
 
 
