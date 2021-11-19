@@ -3,7 +3,7 @@ setInterval(function() {
     $("#currentDay").text(today.format("dddd, MMMM Do"));
 }, 1000);
 
-isItTime();
+
 
 function pageLoad() {
     if (localStorage. getItem("scheduleStorage") === null) {
@@ -38,7 +38,7 @@ fifteen= 17;
 
 let schedTime;
 
-let scheduleEvent = document.this.form(input.value);
+// let scheduleEvent = document.this.form(input.value);
 
 
 
@@ -46,26 +46,25 @@ let scheduleEvent = document.this.form(input.value);
 
 // Make object of form input value
 
-document.forms.addEventListener("submit", function(scheduleEvent) {
+document.forms.addEventListener("submit", function(e) {
+    preventDefault(e);
     let clicked = scheduleEvent.currentTarget;
-    clicked.id = [input.value]
-});
+    clicked.id = [input.value];
+    localStorage.setItem("scheduleStorage", [scheduleEvent]);
+    }
+);
 
-function storageSubmit() {
-    // get the dom object out of event
-    // get input value from form.
-    // add to schedule object
-    // add get item from storage to pageload
-    localStorage.setItem("schedule", JSON.stringify(scheduleEvent));
-}
-
-function storageSubmit(scheduleEvent) {
-    let clicked = scheduleEvent.currentTarget;   
-}
+// function storageSubmit() {
+//     // get the dom object out of event
+//     // get input value from form.
+//     // add to schedule object
+//     // add get item from storage to pageload
+//     localStorage.setItem("schedule", JSON.stringify(scheduleEvent));
+// }
 
 let timeArray = [nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen];
 
-let scheduleEvent = document.this.form("");
+// let scheduleEvent = document.this.form("");
 
 
 function isItTime() {
@@ -82,46 +81,6 @@ function isItTime() {
             timeArray[i].setAttribute("style", "background-color: grey");
         }  
     }        
-};
+};     
 
-
-
-let faceSubmit = [input]
-
-// let nineSubmit = document.getElementById("nine-am");
-
-// nineSubmit.addEventListener("submit", function(event) {
-//     event.preventDefault();
-//     let nineInput = document.getElementById("nine-input");
-//     let scheduleEvent = {
-//         description: nineInput.value,
-//         time: nine.time
-//     }   
-
-// });
-
-
-
-
-
-// var testObject = [{ 'name': 'James', 'score': 90, 'time': '16:00' }, { 
-//     'name': 'Robert', 'score': 80, 'time': '15:00' }];
-//     localStorage.setItem('testObject', JSON.stringify(testObject));
-    
-//     var retrievedObject = JSON.parse(localStorage.getItem('testObject'));
-    
-//     var tbody = document.getElementById('tbody');
-    
-//     for (var i = 0; i < retrievedObject.length; i++) {
-//       var tr = "<tr>";
-//       tr += "<td>Name</td>" + "<td>" + retrievedObject[i].name + "</td></tr>";
-//       tr += "<td>Score</td>" + "<td>" + retrievedObject[i].score + "</td></tr>";
-//       tr += "<td>Time</td>" + "<td>" + retrievedObject[i].time + "</td></tr>";
-//       tbody.innerHTML += tr;
-//     }
-
-// localStorage.getItem(eventStorage)
-
-
-
-console.log(moment().hours());
+  console.log(moment().hours());
