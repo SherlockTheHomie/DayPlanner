@@ -1,7 +1,9 @@
 # DayPlanner
-Simple, elegant and non-functioning day planner. I got 90% there, then started doing some research and learned some stuff. Then I pretty much broke everything, screwed up my commits after
-attempting a revert and well. It is what it is. Bless the resubmit.
+A simple, elegant day planner. User can see the current day and time based on the color of the hours background color and enter in an event to plan out their day. 
 
 https://sherlockthehomie.github.io/DayPlanner/
 
 https://github.com/SherlockTheHomie/DayPlanner
+
+
+![image](https://user-images.githubusercontent.com/86977087/143786021-e964e436-65f9-462f-90b4-b089dd63ff07.png)
