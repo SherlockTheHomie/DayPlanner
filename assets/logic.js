@@ -66,11 +66,11 @@ function isItTime() {
     for (let i = 0; i < hoursArray.length; i++) {
         schedTime = hoursArray[i].time;
         if (moment().hours() === schedTime) {
-            hoursArray[i].setAttribute("style", "background-color: red");
+            hoursArray[i].setAttribute("style", "background-color: #ff6961");
         } else if (moment().hours() < schedTime) {
-            hoursArray[i].setAttribute("style", "background-color: green");
+            hoursArray[i].setAttribute("style", "background-color: #77dd77");
         } else if (moment().hours() > schedTime) {
-            hoursArray[i].setAttribute("style", "background-color: grey");
+            hoursArray[i].setAttribute("style", "background-color: #d3d3d3");
         }
     }
 }
