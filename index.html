@@ -18,85 +18,61 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-        <div>
-            <table class="table">
-                <tbody>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">9 am</th>
-                    <td class="description" id="nine">
-                    <form id="nine-am" data-time="9:00am">
-                          <input type="text" id="input"/>
-                        </form>
-                    </td>
-                        <td>
-                            <input type="submit" form="nine-am"/>
-                        </td>
-                  </tr>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">10 am</th>
-                    <td class="description" id="ten">
-                        <form id="ten-am">
-                          <input type="text" id="input"/>
-                      </form>
-                    </td>
-                    <td>
-                      <input type="submit" form="ten-am" data-="10:00am"/>
-                    </td>
-                  </tr>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">11 am</th>
-                    <td class="description" id="eleven">
-                      <form id="eleven-am">
-                        <input type="text" id="input"/>
-                    </form>
-                    </td>
-                    <td>
-                      <input type="submit" form="eleven-am" data-="11:00am"/>
-                    </td>
-                  </tr>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">12 pm</th>
-                    <td class="description" id="twelve">
+      
+        <form class="row" id="nine-am"> 
+          <div class="col-2 hour time-block">9 am</div>
+            <textarea id="nine" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
+        
+        <form class="row" id="ten-am"> 
+          <div class="col-2 hour time-block">10 am</div>
+            <textarea id="ten" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
 
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">1 pm</th>
-                    <td class="description" id="thirteen">
+        <form class="row" id="eleven-am"> 
+          <div class="col-2 hour time-block">11 am</div>
+            <textarea id="eleven" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
 
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">2 pm</th>
-                    <td class="description"  id="fourteen">
+        <form class="row" id="twelve-pm"> 
+          <div class="col-2 hour time-block">12 am</div>
+            <textarea id="twelve" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
 
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">3 pm</th>
-                    <td class="description"  id="fifteen">
+        <form class="row" id="one-pm"> 
+          <div class="col-2 hour time-block">1 pm</div>
+            <textarea id="thirteen" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
 
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">4 pm</th>
-                    <td class="description"  id="sixteen">
+        <form class="row" id="two-pm"> 
+          <div class="col-2 hour time-block">2 pm</div>
+            <textarea id="fourteen" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
 
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr class="row d-flex justify-content-between">
-                    <th scope="row">5 pm</th>
-                    <td id="seventeen">Mark</td>
-                    <td>Otto</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
+        <form class="row" id="three-pm"> 
+          <div class="col-2 hour time-block">3 pm</div>
+            <textarea id="fifteen" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
+
+        <form class="row" id="four-pm"> 
+          <div class="col-2 hour time-block">4 pm</div>
+            <textarea id="sixteen" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
+
+        <form class="row" id="five-pm"> 
+          <div class="col-2 hour time-block">5 pm</div>
+            <textarea id="seventeen" class="col-8 description time-block"></textarea>
+          <div class="col-2 saveBtn time-block" id="saveBtn">Save</div>
+        </form>       
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
